@@ -55,7 +55,7 @@ miniforge: Lightweight Conda installer for bioinformatics packages.
 raxml-ng: Builds maximum likelihood phylogenetic trees.  
 modeltest-ng: Helps select the best evolutionary model (optional support tool).  
 
-👉 This step sets up a complete phylogenetic analysis environment.
+This step sets up a complete phylogenetic analysis environment.
 
 </section>
 
@@ -88,12 +88,12 @@ Connects to NCBI protein database
 Fetches structure/sequence ID: 1CZ7_A  
 Saves sequence in FASTA format  
 
-📌 Output:
+Output:
 
 Protein ID  
 Sequence length  
 
-👉 This becomes the query sequence for evolutionary analysis.
+This becomes the query sequence for evolutionary analysis.
 
 </section>
 
@@ -121,7 +121,7 @@ Runs BLASTP (protein-protein BLAST)
 Searches against PDB database  
 Finds structurally similar proteins  
 
-👉 Purpose: To identify homologous kinesin-like proteins for phylogenetic comparison.
+Purpose: To identify homologous kinesin-like proteins for phylogenetic comparison.
 
 </section>
 
@@ -146,7 +146,7 @@ Reads BLAST output in XML format
 Extracts alignment results  
 Counts number of matched sequences  
 
-👉 These hits represent evolutionarily related proteins.
+These hits represent evolutionarily related proteins.
 
 </section>
 
@@ -194,7 +194,7 @@ Removes duplicate sequences using a dictionary
 Extracts subject sequences (sbjct)  
 Writes final dataset to FASTA file  
 
-👉 Output file: kinesin14_sequences.fasta
+Output file: kinesin14_sequences.fasta
 
 This file contains all sequences needed for alignment.
 
@@ -219,7 +219,7 @@ conserved regions
 mutations  
 evolutionary differences  
 
-👉 Output: aligned_kinesin14.fasta
+ Output: aligned_kinesin14.fasta
 
 This is the foundation for phylogenetic tree construction.
 
@@ -247,7 +247,7 @@ Confirms:
 number of sequences  
 alignment length consistency  
 
-👉 Ensures alignment is valid before tree building.
+ Ensures alignment is valid before tree building.
 
 </section>
 
@@ -269,6 +269,7 @@ plt.xlabel("Length")
 plt.ylabel("Count")
 plt.show()
 </pre>
+<img width="562" height="455" alt="image" src="https://github.com/user-attachments/assets/2ce0afac-1ddb-450b-9a7e-50f6aee64280" />
 
 Explanation:
 
@@ -302,7 +303,7 @@ LG: amino acid substitution model
 I: invariant sites  
 G4: gamma distribution (rate variation)  
 
-👉 Output: K14_TREE.raxml.bestTree
+ Output: K14_TREE.raxml.bestTree
 
 This represents evolutionary history of Kinesin-14 proteins.
 
@@ -329,8 +330,9 @@ Explanation:
 
 Loads Newick tree format  
 Displays evolutionary relationships visually  
+<img width="562" height="434" alt="image" src="https://github.com/user-attachments/assets/ad537c07-989d-42c3-8b09-0dc038a31b96" />
 
-👉 Interpretation:
+Interpretation:
 
 Branch length = evolutionary distance  
 Clusters = similar proteins  
@@ -360,7 +362,7 @@ Explanation:
 Performs bootstrap resampling (100 replicates)  
 Measures confidence in tree branches  
 
-👉 Higher bootstrap values = more reliable evolutionary relationships
+Higher bootstrap values = more reliable evolutionary relationships
 
 </section>
 
@@ -385,11 +387,11 @@ Kinesin-14 proteins show strong conservation in motor domains but variation in r
 
 This project demonstrates a complete bioinformatics pipeline for phylogenetic analysis:
 
-✔ Sequence retrieval (NCBI)  
-✔ Similarity search (BLAST)  
-✔ Multiple sequence alignment (MAFFT)  
-✔ Evolutionary tree building (RAxML-NG)  
-✔ Visualization (Matplotlib / Biopython)  
+Sequence retrieval (NCBI)  
+Similarity search (BLAST)  
+Multiple sequence alignment (MAFFT)  
+Evolutionary tree building (RAxML-NG)  
+Visualization (Matplotlib / Biopython)  
 
 This workflow can be extended to:
 
